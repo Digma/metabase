@@ -13,7 +13,7 @@ SetupControllers.controller('SetupController', ['$scope', '$location', '$timeout
             // TODO - this session cookie code needs to be somewhere easily reusable
             var isSecure = ($location.protocol() === "https") ? true : false;
             ipCookie('metabase.SESSION_ID', sessionId, {
-                path: '/',
+                path: '/metabase/',
                 expires: 14,
                 secure: isSecure
             });

@@ -117,4 +117,4 @@
   "Generate a properly formed password reset url given a password reset token."
   [reset-token]
   {:pre [(string? reset-token)]}
-  (str (setting/get :-site-url) "/auth/reset_password/" reset-token))
+  (str (setting/get :-site-url) "/metabase/auth/reset_password/" reset-token))

@@ -18,7 +18,7 @@ var MetabaseCookies = {
             // set a session cookie
             var isSecure = (mb_cookies.location.protocol() === "https") ? true : false;
             mb_cookies.ipCookie(METABASE_SESSION_COOKIE, sessionId, {
-                path: '/',
+                path: '/metabase/',
                 expires: 14,
                 secure: isSecure
             });

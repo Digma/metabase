@@ -9,28 +9,28 @@ var Card = angular.module('metabase.card', [
 ]);
 
 Card.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/q', {
+    $routeProvider.when('/metabase/q', {
         templateUrl: '/app/card/partials/card_detail.html',
         controller: 'CardDetail'
     });
-    $routeProvider.when('/card/:cardId', {
+    $routeProvider.when('/metabase/card/:cardId', {
         templateUrl: '/app/card/partials/card_detail.html',
         controller: 'CardDetail'
     });
 
     // redirect old urls to new ones with hashes
-    $routeProvider.when('/q/:serializedCard', {
+    $routeProvider.when('/metabase/q/:serializedCard', {
         redirectTo: function (routeParams, path, search) {
             return "/q#"+routeParams.serializedCard;
         }
     });
-    $routeProvider.when('/card/:cardId/:serializedCard', {
+    $routeProvider.when('/metabase/card/:cardId/:serializedCard', {
         redirectTo: function (routeParams, path, search) {
             return "/card/"+routeParams.cardId+"#"+routeParams.serializedCard;
         }
     });
 
-    $routeProvider.when('/card/', {
+    $routeProvider.when('/metabase/card/', {
         template:   '<div mb-redux-component class="flex flex-column flex-full" />',
         controller: 'CardList',
         resolve: {

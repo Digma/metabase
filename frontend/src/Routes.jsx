@@ -11,7 +11,7 @@ export default class Routes extends Component {
     render() {
         return (
             <ReduxRouter>
-                <Route path="/admin">
+                <Route path="/metabase/admin">
                     <Route path="datamodel">
                         <Route path="metric/create" component={MetricApp} />
                         <Route path="metric/:id" component={MetricApp} />
@@ -22,7 +22,7 @@ export default class Routes extends Component {
                         <Route path=":entity/:id/revisions" component={RevisionHistoryApp} />
                     </Route>
                 </Route>
-                <Route path="/*"/>
+                <Route path="/metabase/*"/>
             </ReduxRouter>
         );
     }

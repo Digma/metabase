@@ -80,28 +80,28 @@ Metabase.config(['$routeProvider', '$locationProvider', function($routeProvider,
         }
     };
 
-    $routeProvider.when('/admin/datamodel/metric', route);
-    $routeProvider.when('/admin/datamodel/metric/:segmentId', route);
+    $routeProvider.when('/metabase/admin/datamodel/metric', route);
+    $routeProvider.when('/metabase/admin/datamodel/metric/:segmentId', route);
 
-    $routeProvider.when('/admin/datamodel/segment', route);
-    $routeProvider.when('/admin/datamodel/segment/:segmentId', route);
+    $routeProvider.when('/metabase/admin/datamodel/segment', route);
+    $routeProvider.when('/metabase/admin/datamodel/segment/:segmentId', route);
 
-    $routeProvider.when('/admin/datamodel/:objectType/:objectId/revisions', route);
+    $routeProvider.when('/metabase/admin/datamodel/:objectType/:objectId/revisions', route);
 
-    $routeProvider.when('/unauthorized/', {
+    $routeProvider.when('/metabase/unauthorized/', {
         templateUrl: '/app/unauthorized.html',
         controller: 'Unauthorized'
     });
 
-    $routeProvider.when('/auth/', {
+    $routeProvider.when('/metabase/auth/', {
         redirectTo: function(routeParams, path, search) {
-            return '/auth/login';
+            return '/metabase/auth/login';
         }
     });
 
-    $routeProvider.when('/admin/', {
+    $routeProvider.when('/metabase/admin/', {
         redirectTo: function(routeParams, path, search) {
-            return '/admin/settings';
+            return '/metabase/admin/settings';
         }
     });
 
