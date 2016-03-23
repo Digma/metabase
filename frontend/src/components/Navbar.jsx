@@ -98,7 +98,7 @@ export default class Navbar extends Component {
             <nav className="CheckBg CheckBg-offset relative bg-brand sm-py2 sm-py1 xl-py3">
                 <ul className="pl4 pr1 flex align-center">
                     <li>
-                        <a data-metabase-event={"Navbar;Logo"} className="NavItem cursor-pointer text-white flex align-center my1 transition-background" href="/">
+                        <a data-metabase-event={"Navbar;Logo"} className="NavItem cursor-pointer text-white flex align-center my1 transition-background" href="/metabase/">
                             <span><LogoIcon className="text-white m1"></LogoIcon></span>
                         </a>
                     </li>
